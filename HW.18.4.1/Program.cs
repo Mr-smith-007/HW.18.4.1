@@ -1,2 +1,31 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using YoutubeExplode;
+
+namespace HW._18._4._1
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Введите url видеоролика");
+            string url = Console.ReadLine();
+
+            Console.WriteLine("Ввведите путь сохранения видеоролика");
+            string path = Console.ReadLine();
+
+            
+            User user = new User();
+            Ireceiver getDescription = new GetDescription(url);
+            user.SetCommand(new GetDescriptionCommand(getDescription));
+            user.RunCommand();
+
+            
+
+
+        }
+    }
+}
