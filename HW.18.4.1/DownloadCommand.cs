@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW._18._4._1
 {
-    internal class DownloadCommand :Icommand
+    internal class DownloadCommand : Icommand
     {
         Ireceiver download;
 
@@ -17,7 +17,6 @@ namespace HW._18._4._1
 
         public void Run()
         {
-            Console.WriteLine("Скачивание начато");
             download.Operation();
             Console.WriteLine("Скачивание завершено");
 

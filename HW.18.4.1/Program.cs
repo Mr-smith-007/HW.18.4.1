@@ -14,13 +14,14 @@ namespace HW._18._4._1
             Console.WriteLine("Введите url видеоролика");
             string url = Console.ReadLine();
 
-            Console.WriteLine("Ввведите путь сохранения видеоролика");
-            string path = Console.ReadLine();
-
-            
+                        
             User user = new User();
             Ireceiver getDescription = new GetDescription(url);
             user.SetCommand(new GetDescriptionCommand(getDescription));
+            user.RunCommand();
+
+            Ireceiver download = new DownloadVideo(url);
+            user.SetCommand(new DownloadCommand(download));
             user.RunCommand();
 
             
