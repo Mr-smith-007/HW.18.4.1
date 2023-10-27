@@ -15,7 +15,7 @@ namespace HW._18._4._1.Receivers
         {
             _url = url;
         }
-        public Task Operation()
+        public async Task Operation()
         {
             var youtube = new YoutubeClient();
             var videoInfo = youtube.Videos.GetAsync(_url).Result;

@@ -27,6 +27,7 @@ namespace HW._18._4._1
             user.SetCommand(new DownloadCommand(download));
             user.RunCommand();
 
+            Console.ReadKey();
             
 
 
